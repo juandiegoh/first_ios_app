@@ -17,13 +17,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor yellowColor];
+}
+
+- (void)loadView
+{
+    CGRect viewRect = [[UIScreen mainScreen] bounds];
+	UIView *colorView = [[UIView alloc] initWithFrame:viewRect];
+    self.view = colorView;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"Started touching the screen!");
 }
 
 @end
